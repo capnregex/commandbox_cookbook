@@ -20,7 +20,9 @@ suites:
   - name: default
     run_list:
       - recipe[coldfusion::default]
+      - recipe[coldfusion::commandbox]
     verifier:
       inspec_tests:
         - test/integration/default
+        - test/integration/commandbox
     attributes:
