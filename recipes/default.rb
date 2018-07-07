@@ -31,7 +31,13 @@ if platform_family?('rhel')
   end
 end
 
-git '/home/vagrant/commandbox/artifacts' do
+directory '/home/vagrant/.CommandBox' do
+  user 'vagrant'
+  group 'vagrant'
+  mode '755'
+end
+
+git '/home/vagrant/.CommandBox/artifacts' do
   repository 'https://github.com/coquus-liber/commandbox_artifacts.git'
   user 'vagrant'
   group 'vagrant'

@@ -14,15 +14,12 @@ verifier:
 
 platforms:
   - name: ubuntu-16.04
-  - name: centos-7
 
 suites:
   - name: default
     run_list:
-      - recipe[coldfusion::default]
-      - recipe[coldfusion::commandbox]
+      - recipe[commandbox::default]
     verifier:
       inspec_tests:
         - test/integration/default
-        - test/integration/commandbox
     attributes:
